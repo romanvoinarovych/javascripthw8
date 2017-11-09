@@ -3,273 +3,83 @@
     <head>
         <meta charset="utf-8">
             <title>
-                Home work 8
+                Home work 10
             </title>
             <meta content="IE=edge" http-equiv="X-UA-Compatible">
             <meta content="width=device-width, initial-scale=1" name="viewport">
-            <meta content="" name="description"/>
-            <link href="favicon.png" rel="icon"/>
-            <link href="css/normalize.css" rel="stylesheet"/>
-            <link href="css/layout.css" rel="stylesheet"/>
-            <link href="css/jquery-ui.css" rel="stylesheet">
+            <meta content="" name="description">
+            <link href="favicon.png" rel="icon">
+            <link href="css/normalize.css" rel="stylesheet">
+            <link href="css/layout.css" rel="stylesheet">
             <link href="css/style.css" rel="stylesheet">
+            <link href="css/slick.css" rel="stylesheet">
+            <!-- <link href="css/slick-theme.css" rel="stylesheet"> -->
             <script src="https://use.fontawesome.com/c7055d58e4.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,900" rel="stylesheet">
     </head>
-    <body id="background">
-        <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
-            <symbol id="tooltip">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                              fill-rule: evenodd;
-                            }
-                        </style>
-                    </defs>
-                    <path class="cls-1" d="M362.4,197h-3.62l-3.79,3.79h0a1.4,1.4,0,0,1-1.98,0h0L349.22,197H345.6a2.8,2.8,0,0,1-2.8-2.8V181.6a2.8,2.8,0,0,1,2.8-2.8h16.8a2.8,2.8,0,0,1,2.8,2.8v12.6A2.8,2.8,0,0,1,362.4,197Zm0-14a1.4,1.4,0,0,0-1.4-1.4H347a1.4,1.4,0,0,0-1.4,1.4v9.8a1.4,1.4,0,0,0,1.4,1.4h2.8a1.4,1.4,0,0,1,.99.41h0l3.21,3.209,3.21-3.209h0a1.392,1.392,0,0,1,.99-0.41H361a1.4,1.4,0,0,0,1.4-1.4V183Zm-4.2,8.4h-8.4a1.4,1.4,0,0,1,0-2.8h8.4A1.4,1.4,0,1,1,358.2,191.4Zm0-4.2h-8.4a1.4,1.4,0,0,1,0-2.8h8.4A1.4,1.4,0,1,1,358.2,187.2Z" id="tooltip.svg" transform="translate(-342.813 -178.813)">
-                    </path>
-                </svg>
-            </symbol>
-            <symbol id="card">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                              fill-rule: evenodd;
-                            }
-                        </style>
-                    </defs>
-                    <path class="cls-1" d="M543.993,190.308a4.8,4.8,0,0,1-4.747,4.849,4.657,4.657,0,0,1-3.774-1.957l-0.023.017-0.949-1.293-0.95,1.293-0.013-.01a4.693,4.693,0,0,1-3.784,1.95,4.8,4.8,0,0,1-4.746-4.849,4.876,4.876,0,0,1,.962-2.9l-0.013-.01s6.962-8.406,8.544-8.406,8.543,8.406,8.543,8.406l-0.013.01A4.876,4.876,0,0,1,543.993,190.308Zm-11.075,6.465v-1.616a1.582,1.582,0,1,1,3.164,0v1.616a1.617,1.617,0,0,1,0,3.234h-3.164A1.617,1.617,0,0,1,532.918,196.773Z" id="card.svg" transform="translate(-525 -179)">
-                    </path>
-                </svg>
-            </symbol>
-            <symbol id="basket">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                              fill-rule: evenodd;
-                            }
-                        </style>
-                    </defs>
-                    <path class="cls-1" d="M722.946,186.765l0.024,0.006-2.5,11.25-0.024-.006a1.231,1.231,0,0,1-1.2.984h-12.5a1.231,1.231,0,0,1-1.2-.984l-0.024.006-2.5-11.25,0.024-.006A1.176,1.176,0,0,1,703,186.5a1.25,1.25,0,0,1,1.25-1.25h2.5a6.25,6.25,0,1,1,12.5,0h2.5A1.25,1.25,0,0,1,723,186.5,1.176,1.176,0,0,1,722.946,186.765ZM713,181.5a3.75,3.75,0,0,0-3.75,3.751h7.5A3.75,3.75,0,0,0,713,181.5Zm5,8.751A1.251,1.251,0,0,1,716.75,189V187.75h-7.5V189a1.25,1.25,0,1,1-2.5,0V187.75h-0.942l1.945,8.749h10.494l1.945-8.749H719.25V189A1.251,1.251,0,0,1,718,190.25Z" id="basket.svg" transform="translate(-703 -179)">
-                    </path>
-                </svg>
-            </symbol>
-        </svg>
-        <main>
-            <div id="tabs">
-                <ul>
-                    <li>
-                        <a href="#tabs-1">
-                            <svg class="tooltip" style="width:24px; height:24px; fill:#b7bacd; opacity: 0.7; viewBox=">
-                                <use xlink:href="#tooltip">
-                                </use>
-                            </svg>
-                            <!-- <p> -->
-                                information
-                            <!-- </p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#tabs-2">
-                            <svg class="card" style="width:19px; height:21px; fill:#b7bacd; opacity: 0.7; viewBox=">
-                                <use xlink:href="#card">
-                                </use>
-                            </svg><br>
-                            <!-- <p> -->
-                                rating info
-                            <!-- </p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#tabs-3">
-                            <svg class="basket" style="width:20px; height:20px; fill:#b7bacd; opacity: 0.7; viewBox=">
-                                <use xlink:href="#basket">
-                                </use>
-                            </svg><br>
-                            <!-- <p> -->
-                                where to bay
-                            <!-- </p> -->
-                        </a>
-                    </li>
-                </ul>
-                <div id="tabs-1">
-                    <div class="ba-tabs-left">
-                        <div class="ba-tabs-left__image">
-                            <a href="#">
-                                <img alt="game_far_cry" src="img/gameicon.png"/>
-                            </a>
-                        </div>
-                        <div class="star-rating__wrap">
-                            <input class="star-rating__input" id="star-rating-10" name="rating" type="radio" value="5">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-10" title="5 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-9" name="rating" type="radio" value="4">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-9" title="4 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-8" name="rating" type="radio" value="3">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-8" title="3 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-7" name="rating" type="radio" value="2">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-7" title="2 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-6" name="rating" type="radio" value="1">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-6" title="1 out of 5 stars">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="ba-tabs-right">
-                        <h2 class="ba-game-name">
-                            FarCry 4
-                        </h2>
-                        <p class="ba-date-released">
-                            First Released Nov 17, 2014
-                        </p>
-                        <p class="ba-game-info">
-                            In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
-                            layas struggling under the regime of a despotic self-appointed king.
-                        </p>
-                        <div class="ba-score">
-                            7.8
-                        </div>
-                        <div class="ba-tabs-right__bottom">
-                            <div class="ba-tabs-right__bottom--price">
-                                <p>
-                                    20% OFF!
-                                </p>
-                                <h2>
-                                    $59.96
-                                </h2>
-                            </div>
-                            <div class="ba-tabs-right__bottom--btn">
-                                <a href="#">
-                                    buy it now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tabs-2">
-                    <div class="ba-tabs-left">
-                        <div class="ba-tabs-left__image">
-                            <a href="#">
-                                <img alt="game_far_cry" src="img/gameicon.png"/>
-                            </a>
-                        </div>
-                        <div class="star-rating__wrap">
-                            <input class="star-rating__input" id="star-rating-15" name="rating" type="radio" value="5">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-15" title="5 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-14" name="rating" type="radio" value="4">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-14" title="4 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-13" name="rating" type="radio" value="3">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-13" title="3 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-12" name="rating" type="radio" value="2">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-12" title="2 out of 5 stars">
-                            </label>
-                            <input class="star-rating__input" id="star-rating-11" name="rating" type="radio" value="1">
-                            <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-11" title="1 out of 5 stars">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="ba-tabs-right">
-                        <h2 class="ba-game-name">
-                            FarCry 4
-                        </h2>
-                        <p class="ba-date-released">
-                            First Released Nov 17, 2014
-                        </p>
-                        <p class="ba-game-info">
-                            In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
-                            layas struggling under the regime of a despotic self-appointed king.
-                        </p>
-                        <div class="ba-score">
-                            7.8
-                        </div>
-                        <div class="ba-tabs-right__bottom">
-                            <div class="ba-tabs-right__bottom--price">
-                                <p>
-                                    20% OFF!
-                                </p>
-                                <h2>
-                                    $59.96
-                                </h2>
-                            </div>
-                            <div class="ba-tabs-right__bottom--btn">
-                                <a href="#">
-                                    buy it now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tabs-3">
-                   <div class="ba-tabs-left">
-                       <div class="ba-tabs-left__image">
-                           <a href="#">
-                               <img alt="game_far_cry" src="img/gameicon.png"/>
-                           </a>
-                       </div>
-                       <div class="star-rating__wrap">
-                           <input class="star-rating__input" id="star-rating-5" name="rating" type="radio" value="5">
-                           <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-5" title="5 out of 5 stars">
-                           </label>
-                           <input class="star-rating__input" id="star-rating-4" name="rating" type="radio" value="4">
-                           <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-4" title="4 out of 5 stars">
-                           </label>
-                           <input class="star-rating__input" id="star-rating-3" name="rating" type="radio" value="3">
-                           <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-3" title="3 out of 5 stars">
-                           </label>
-                           <input class="star-rating__input" id="star-rating-2" name="rating" type="radio" value="2">
-                           <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-2" title="2 out of 5 stars">
-                           </label>
-                           <input class="star-rating__input" id="star-rating-1" name="rating" type="radio" value="1">
-                           <label class="star-rating__ico fa fa-star fa-lg" for="star-rating-1" title="1 out of 5 stars">
-                           </label>
-                       </div>
-                   </div>
-                   <div class="ba-tabs-right">
-                       <h2 class="ba-game-name">
-                           FarCry 4
-                       </h2>
-                       <p class="ba-date-released">
-                           First Released Nov 17, 2014
-                       </p>
-                       <p class="ba-game-info">
-                           In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
-                           layas struggling under the regime of a despotic self-appointed king.
-                       </p>
-                       <div class="ba-score">
-                           7.8
-                       </div>
-                       <div class="ba-tabs-right__bottom">
-                           <div class="ba-tabs-right__bottom--price">
-                               <p>
-                                   20% OFF!
-                               </p>
-                               <h2>
-                                   $59.96
-                               </h2>
-                           </div>
-                           <div class="ba-tabs-right__bottom--btn">
-                               <a href="#">
-                                   buy it now
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </div>
-            <script src="js/external/jquery/jquery.js">
-            </script>
-            <script src="js/jquery-ui.js">
-            </script>
-            <script>
-                $( "#tabs" ).tabs();
-            </script>
-        </main>
+    <body>
+    	<div class="ba-main">
+    		<div class="ba-container">
+    			<div class="ba-header">
+    				<h2 class="ba-header-minor">our featured work</h2>
+    				<h1 class="ba-header-basic">We create engaging<br>
+    					experiences through<br>
+    				creativity & craft</h1>
+    				<img class="ba-header-triangle" src="img/Rectangle.svg" alt="rectangle">
+    				<img class="ba-header-plus" src="img/Rectangle6.svg" alt="rectangle">
+    			</div>
+    			<div class="ba-slider">
+    				<div class="ba-slider-item">
+    					<img src="img/Layer.jpg" alt="slider-item">
+    					<div class="ba-slider-item--text">
+    						<h3>Apex Magazine<br>
+    						June Issue</h3>
+    						<p>by Fabrizio Morra</p>
+    					</div>
+    				</div>
+    				<div  class="ba-slider-item">
+    					<img src="img/Layer7.jpg" alt="slider-item">
+    					<div class="ba-slider-item--text">
+    						<h3>Apex Magazine<br>
+    						June Issue</h3>
+    						<p>by Fabrizio Morra</p>
+    					</div>
+    				</div>
+    				<div  class="ba-slider-item">
+    					<img src="img/Layer8.jpg" alt="slider-item">
+    					<div class="ba-slider-item--text">
+    						<h3>Apex Magazine<br>
+    						June Issue</h3>
+    						<p>by Fabrizio Morra</p>
+    					</div>
+    				</div>
+    				<div  class="ba-slider-item">
+    					<img src="img/Layer9.jpg" alt="slider-item">
+    					<div class="ba-slider-item--text">
+    						<h3>Apex Magazine<br>
+    						June Issue</h3>
+    						<p>by Fabrizio Morra</p>
+    					</div>
+    				</div  class="ba-slider-item">
+    				<a href="#" class="ba-slider-next">
+    					<span class="fa-stack fa-3x">
+    						<i class="fa fa-circle-thin fa-stack-2x"></i>
+    						<i class="fa fa-chevron-right fa-stack-1x"></i>
+    					</span>
+    				</a>
+    				<a href="#" class="ba-slider-prev">
+    					<span class="fa-stack fa-3x">
+    						<i class="fa fa-circle-thin fa-stack-2x"></i>
+    						<i class="fa fa-chevron-left fa-stack-1x"></i>
+    					</span>
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<!-- <script src="js/jquery.js"></script> -->
+    	<script src="js/slick.min.js"></script>
+    	<script src="js/main.js"></script>
+
     </body>
 </html>
